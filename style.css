@@ -1,0 +1,310 @@
+:root {
+  --mainwhite: #f2f2f2;
+  --mainblack: #0c0e0c;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+
+  box-sizing: border-box;
+}
+body {
+  font-family: "Anek Gurmukhi", sans-serif;
+
+  height: 100vh;
+
+  background-color: rgba(228, 216, 241, 0.778);
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  height: 95vh;
+  width: 95vw;
+  display: flex;
+  margin-inline: 40px;
+  margin-block: 10px;
+}
+.left {
+  position: relative;
+  height: 100%;
+  width: 49.9%;
+}
+.navigation {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation span {
+  font-size: 1.7rem;
+  font-weight: 600;
+  animation: 0.5s ease-in head;
+}
+@keyframes head {
+  0% {
+    transform: scale(0, 0);
+  }
+  40% {
+    transform: scale(0.4, 0.4);
+  }
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+  70% {
+    transform: scale(0.7, 0.7);
+  }
+  80% {
+    transform: scale(0.8, 0.8);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+nav {
+  width: 50%;
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav li:nth-child(1) {
+  animation-name: navbar;
+  animation-delay: 0.1s;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav li:nth-child(2) {
+  animation-name: navbar;
+  animation-delay: 0.4s;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav li:nth-child(3) {
+  animation-name: navbar;
+  animation-delay: 0.7s;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+nav li:nth-child(4) {
+  animation-name: navbar;
+  animation-delay: 1s;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes navbar {
+  0%,
+  80% {
+    transform: translate3d(-10rem, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.navigation a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: rgb(45, 42, 42);
+}
+header {
+  height: 20%;
+}
+
+main {
+  height: 80%;
+  /* margin-top: 40px; */
+}
+main > div > span {
+  margin-left: 10px;
+  color: rgb(119, 122, 125);
+}
+.maintext {
+  margin-top: 10px;
+  width: 80%;
+  border-bottom: 1px solid rgb(224, 220, 220);
+}
+.maintext h1 {
+  font-weight: 400;
+  font-size: 3rem;
+  color: #181918;
+}
+.bttn {
+  width: 30%;
+  float: right;
+}
+.bttn button {
+  border-style: none;
+  background-color: transparent;
+}
+.bttn button span {
+  padding: 4px;
+}
+#mainpara {
+  margin-top: 20px;
+  font-weight: 500;
+  color: rgb(56, 52, 52);
+  width: 80%;
+  font-size: 1.2rem;
+}
+#midbttn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--mainblack);
+  border-style: none;
+  margin-top: 10px;
+  color: var(--mainwhite);
+  height: 40px;
+  width: 180px;
+  font-weight: 400;
+  border-radius: 20px;
+}
+.bottom {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+}
+
+.bottomleft {
+  /* animation: bottomleft 500ms cubic-bezier(0.3, 0.42, 1, 0.33); */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+/* @keyframes bottomleft {
+        0% {
+          transform: translate3d(0, 7rem, 0);
+        }
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+      } */
+.para {
+  font-size: 1.5rem;
+}
+.choices {
+  width: 60%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.choices button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  margin: 5px;
+  background-color: hwb(0 95% 5% / 0.327);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  height: 30px;
+  border: 1px solid rgb(51, 47, 47);
+}
+.bottomright {
+  background-color: rgba(255, 255, 255, 0.332);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.386);
+
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  bottom: 100px;
+  animation: 0.9s ease-in-out bttmright;
+  right: 35%;
+}
+@keyframes bttmright {
+  0% {
+    transform: translate3d(-1.5rem, 0, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(1.5rem, 0, 0);
+  }
+}
+button:hover {
+  cursor: pointer;
+}
+.img {
+  background-image: url("Default_3d_renders_of_futuristic_things_experimentals_0_9198b6ad-3041-4ced-ad78-7c93be62b542_0.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 120px;
+
+  margin-inline: 5px;
+  height: 100px;
+  border-radius: 10px;
+  animation: 1s ease-in-out zoomout;
+}
+@keyframes zoomout {
+  0% {
+    transform: scale(0.4, 0.4);
+  }
+}
+
+.description {
+  max-height: 140px;
+
+  padding: 1rem;
+}
+
+.description h4 {
+  font-size: large;
+  font-weight: bold;
+  color: #1f211f;
+}
+.description p {
+  margin-top: 5px;
+  max-width: 280px;
+  font-size: 0.9rem;
+}
+.mid {
+  position: absolute;
+  z-index: 10;
+  bottom: 62%;
+  right: 53%;
+}
+.circular {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  animation: rotate 800ms ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.right {
+  background-image: url("Default_atmosphere_like_blade_runner_2049_a_beautiful_cyber_wo_0.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  margin-top: 10px;
+  position: relative;
+  width: 49.9%;
+}
+.search input {
+  float: right;
+  height: 30px;
+  width: 70px;
+  text-align: center;
+  box-shadow: 3px 3px 8px rgb(49, 48, 48);
+  border-style: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.262);
+  backdrop-filter: blur(15px);
+  margin: 10px 30px 0px 0px;
+}
